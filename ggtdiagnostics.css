@@ -1,11 +1,9 @@
 /* VARIABLES  */
-:root{
-  --primary-font-family:"nunito", sans-serif;
+:root {
+  --primary-font-family: "nunito", sans-serif;
   --secondary-font-family: "inter", sans-serif;
---span-font-family:"Catamaran", sans-serif;
+  --span-font-family: "Catamaran", sans-serif;
 }
-
-
 
 * {
   margin: 0;
@@ -19,19 +17,23 @@ body {
   position: relative;
 }
 
-
-h1,h2,h3,h4,h6,h6{
+h1,
+h2,
+h3,
+h4,
+h6,
+h6 {
   font-family: var(--primary-font-family);
 }
 
-p,a{
+p,
+a {
   font-family: var(--secondary-font-family);
 }
 
-span{
+span {
   font-family: var(--span-font-family);
 }
-
 
 /* HEADER SECTION  */
 header {
@@ -40,11 +42,9 @@ header {
   background-position: 50% 50%;
   height: 68vh;
   position: relative;
-  /* z-index: 105; */
 }
 .navbar {
-  /* background-color: yellow; */
-  /* padding-top: 20px; */
+ 
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -58,7 +58,7 @@ header {
   padding: 0 0 0 30px;
 }
 .navbar .right {
-  /* background-color: blue; */
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,11 +69,11 @@ header {
   justify-content: space-between;
   gap: 35px;
   padding-right: 35px;
-  /* padding-left: 40px;
-  margin-left: 20px; */
+
 }
 .navbar .right ul li {
   list-style: none;
+  color: #d6d1d1;
 }
 
 .navbar .right ul li a {
@@ -97,8 +97,6 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   gap: 5px;
-  
-  
 }
 .navbar .right .hamburger-menu .menu1 {
   width: 20px;
@@ -147,13 +145,12 @@ header .text h2 {
   opacity: 0.6;
 }
 
-
 /* MOBILE NAV SECTION  */
-.mobileNav{
+.mobileNav {
   width: 140px;
   height: 100vh;
   padding: 16px;
-  background-color:white;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,20 +162,24 @@ header .text h2 {
   transition: transform 0.3s ease-in-out;
 }
 
-
-.openDrawer{
+.openDrawer {
   transform: translateX(-200px);
 }
 
-.mobileNav #home,#about,#services,#blog,#gallery,#contact{
+.mobileNav #home,
+#about,
+#services,
+#blog,
+#gallery,
+#contact {
   color: #043868;
 }
-.mobileNav a{
-     text-decoration:none;
-    color: black;
-    margin: 16px 0;
+.mobileNav a {
+  text-decoration: none;
+  color: black;
+  margin: 16px 0;
 }
-.mobileNav a:hover{
+.mobileNav a:hover {
   color: #043868;
 }
 
@@ -220,7 +221,6 @@ header .text h2 {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  
 }
 .appointment-section .appointment-left .appointment-box {
   display: flex;
@@ -402,8 +402,6 @@ header .text h2 {
   transform: scale(1);
 }
 
-
-
 /* POPULAR SECTION  */
 .popular-section {
   width: 100%;
@@ -425,76 +423,70 @@ header .text h2 {
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  
-  /* background-color: #043868; */
-  
 
+  /* background-color: #043868; */
 }
- .image-section .card-section {
+.image-section .card-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-position: relative;
+  position: relative;
   border: 1px solid #fafafa;
   box-shadow: 0px 0px 5px rgb(77, 75, 75);
   width: 100%;
-  
+
   z-index: 0;
 }
- 
- .image-section .card-section::before{
-    content: "";
+
+.image-section .card-section::before {
+  content: "";
   background-image: linear-gradient(180deg, #02010100 0%, black 100%);
   height: 100%;
   position: absolute;
   width: 100%;
-inset: 0;
+  inset: 0;
   opacity: 0;
   z-index: -1;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
- }
-
- .image-section .card-section:hover::before {
-opacity: 0.5;
-  
 }
 
-
-
-
-  .image-section .card-1{
-background: url(pill-capsule-medicine-1884775-1024x614.jpg);
-background-position: center center;
-background-repeat: no-repeat;
-background-size:cover;
-width: 100%;
-height: auto;
-z-index: 1;
-   }
-
-   .image-section .card-2{
-background: url(headache.jpg);
-background-position: center center;
-background-repeat: no-repeat;
-background-size:cover;
-width: 100%;
-height: auto;
-z-index: 1;
+.image-section .card-section:hover::before {
+  opacity: 0.5;
 }
 
-.card-section .popular-spacer{
-height: 450px;
+.image-section .card-1 {
+  background: url(pill-capsule-medicine-1884775-1024x614.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
 }
-.card-section .card-text{
-  background-color:white;
+
+.image-section .card-2 {
+  background: url(headache.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.card-section .popular-spacer {
+  height: 450px;
+}
+.card-section .card-text {
+  background-color: white;
 
   width: 100%;
   padding: 16px;
 }
 
-.card-text a{
+.card-text a {
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -503,18 +495,15 @@ height: 450px;
   color: #28bd86;
   font-size: 24px;
 }
-.card-text a span{
+.card-text a span {
   font-size: 14px;
   color: #575c74;
 }
 
-
-.card-text a p{
+.card-text a p {
   font-size: 16px;
-  
   color: #1d1d22;
 }
-
 
 /* DOT SECTION  */
 .dot-box {
@@ -559,10 +548,8 @@ height: 450px;
 .subscribe-section .text-section h1,
 .subscribe-section .text-section p {
   color: white;
-  
 }
 .subscribe-section .text-section h1 {
-  
   font-size: 30px;
 }
 .subscribe-section .text-section .link-dot-box {
@@ -642,7 +629,6 @@ height: 450px;
   font-weight: bold;
   transition: all 0.3s ease;
   cursor: pointer;
-
 }
 .subscribe-section .email-section button:hover {
   background-color: white;
@@ -771,9 +757,9 @@ height: 450px;
 }
 .services-section .services-container .main-services ul li a:hover,
 .useful-links ul li a:hover,
-.socials ul li a:hover{
-color: #0077b5;
-} 
+.socials ul li a:hover {
+  color: #0077b5;
+}
 /* FOOTER SECTION  */
 footer {
   width: 100%;
@@ -890,7 +876,6 @@ footer p {
 
   /* POPULAR SECTION  */
 
-
   /* SUSCRIBE SECTION  */
   .subscribe-section .subscribecontainer {
     padding: 10px 0;
@@ -975,11 +960,7 @@ footer p {
     width: 400px;
   }
 
-
-/* POPULAR SECTION  */
-
-
-
+  /* POPULAR SECTION  */
 
   /* SUSCRIBE SECTION  */
   .subscribe-section .subscribecontainer {
@@ -1012,54 +993,46 @@ footer p {
     display: none;
   }
 
-
-
-.animateBar1{
-     animation: flipBar1 0.5s ;
-     animation-fill-mode: forwards;
+  .animateBar1 {
+    animation: flipBar1 0.5s;
+    animation-fill-mode: forwards;
   }
-  .animateBar2{
-animation: fadeBar2 0.5s ;
-animation-fill-mode: forwards;
+  .animateBar2 {
+    animation: fadeBar2 0.5s;
+    animation-fill-mode: forwards;
   }
-  .animateBar3{
-animation: flipBar3 0.5s ;
-animation-fill-mode: forwards;  
+  .animateBar3 {
+    animation: flipBar3 0.5s;
+    animation-fill-mode: forwards;
   }
- @keyframes flipBar1{
-from{
-  transform: rotate(0);
-
-}
-to{
-  transform: rotate(45deg) translate(4px,10px);
-  
-}
- }
- 
- @keyframes fadeBar2{
-from{
-  transform: scaleX(1);
-  opacity: 1;
-}
-to{
-  transform: scaleX(0);
-  opacity:0;
-}
- }
- 
-  @keyframes flipBar3{
-from{
-  transform: rotate(0);
-
-}
-to{
-  transform: rotate(-45deg) translate(4px,-10px);
-  
-}
+  @keyframes flipBar1 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(45deg) translate(4px, 10px);
+    }
   }
 
+  @keyframes fadeBar2 {
+    from {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    to {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+  }
 
+  @keyframes flipBar3 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(-45deg) translate(4px, -10px);
+    }
+  }
 
   /* CONTACT BUTTON  */
   .navbar .right .contact {
@@ -1135,17 +1108,15 @@ to{
   }
 
   /* POPULAR SECTION  */
-.popular-section .image-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  
-  
-  gap: 20px;
-  padding: 20px;
-}
+  .popular-section .image-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    padding: 20px;
+  }
   /* background-color: #043868; */
-  
 
   /* SERVICES CONTAINER  */
 
@@ -1222,8 +1193,6 @@ to{
 
   /* POPULAR POSTS SECTION  */
 
-
-  
   /* SSUSCRIBE SECTION  */
   .subscribe-section .subscribecontainer {
     width: 100%;
@@ -1237,7 +1206,6 @@ to{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
   }
   .subscribe-section .subscribecontainer .email-section {
     width: 100%;
@@ -1305,16 +1273,14 @@ to{
     padding: 0 10px;
   }
 
-
   /* POPULAR POSTS SECTION  */
-   .subscribe-section .subscribecontainer .text-section {
+  .subscribe-section .subscribecontainer .text-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1px;
   }
-    
-  
+
   /* SERVICES SECTION  */
   .services-section .services-container {
     width: 900px;
@@ -1322,11 +1288,6 @@ to{
     gap: 20px;
   }
 }
-
-
-
-
-
 
 /* ABOUT HOME PAGE  */
 
@@ -2065,15 +2026,12 @@ header.blog {
   gap: 30px;
 }
 
-.blog-images-container h2{
+.blog-images-container h2 {
   text-align: center;
   font-size: 50px;
   padding: 0px 0;
   color: #043868;
-
 }
-
-
 
 .blog-images-container .blood-test,
 .blog-images-container .headache,
@@ -2106,15 +2064,12 @@ header.blog {
 
 /* MEDIA QIERIES ON THE BLOG HOME PAGE  */
 @media only screen and (max-width: 600px) {
-  
-.blog-images-container h2{
-  text-align: center;
-  font-size: 35px;
-  padding: 0px 0;
-  color: #043868;
-
-}
-
+  .blog-images-container h2 {
+    text-align: center;
+    font-size: 35px;
+    padding: 0px 0;
+    color: #043868;
+  }
 
   .blog-images-container .blood-test,
   .blog-images-container .headache,
@@ -2126,9 +2081,6 @@ header.blog {
     gap: 20px;
   }
 }
-
-
-
 
 /* BLOOD TEST PAGE  */
 .blood-test-section {
@@ -2469,18 +2421,12 @@ header.gallery {
   }
 }
 
-
-
-
-@media only screen and (max-width: 800px){
-.gallery-section .gallery-container h2 {
-  font-size: 36px;
-  padding: 30px 0;
-  color: #043868;
-}
-
-
-
+@media only screen and (max-width: 800px) {
+  .gallery-section .gallery-container h2 {
+    font-size: 36px;
+    padding: 30px 0;
+    color: #043868;
+  }
 }
 /* CONTACT PAGE  */
 header.contact-page {
