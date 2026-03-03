@@ -135,7 +135,7 @@ header .navbar {
 }
 
 .navbar .hamburger-menu {
-  width: 50%;
+  width: 35px;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -172,14 +172,19 @@ header .navbar {
   color: white;
   height: 100vh;
   position: fixed;
-  right: -200px; /* hide it */
+  right: -900px; /* hide it */
   top: 0;
   transition:all  0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 996;
   gap: 30px;
+}
+
+#sidebar.active {
+  right:0; /* show it */
 }
 
 #sidebar a{
@@ -204,9 +209,6 @@ header .navbar {
 }
 #sidebar a:hover::before{
   transform:scaleX(1);
-}
-#sidebar.active {
-  right:0; /* show it */
 }
 
 #menu-btn {
@@ -1249,6 +1251,9 @@ footer p {
     display: none;
   }
   .navbar .hamburger-menu {
+    display: flex;
+  }
+  #sidebar {
     display: flex;
   }
 
