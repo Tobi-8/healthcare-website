@@ -1018,8 +1018,7 @@ main{
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr  1fr;
-
-  gap: 60px;
+  gap: 30px;
 }
 
 
@@ -1071,6 +1070,20 @@ main{
 .useful-links ul li a:hover,
 .socials ul li a:hover {
   color: #0077b5;
+}
+.services-section .services-container .main-services{
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.services-section .services-container .main-services ul{
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+
+}
+.main-services ul li{
+  width:49% ;
 }
 /* FOOTER SECTION  */
 footer {
@@ -1355,15 +1368,24 @@ footer p {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0;
+    padding: 20px;
     border-left: 0.5px solid black;
     border-right: 0.5px solid black;
   }
+ .services-section .services-container .main-services{
+  grid-column-start: unset;
+  grid-column-end: unset;
+}
 
-  /* SERVICE SECTION 
-  .services-section .services-container {
-    grid-template-columns: 1fr 1fr;
-  } */
+.services-section .services-container .main-services ul{
+  display: unset;
+  gap: 5px;
+  flex-wrap: wrap;
+
+}
+.main-services ul li{
+  width:49% ;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -1514,7 +1536,7 @@ footer p {
   }
 
   .info-container .info-box .info-mini-box {
-    padding: 0 20px;
+    padding:10px 20px;
   }
 
   /* SERVICES SECTION  */
@@ -1533,10 +1555,13 @@ footer p {
     grid-row-end: 3;
   } */
   .main-services ul{
-    display: flex;
+    display: unset;
     flex-direction: column;
     gap: 5px;
   }
+
+
+ 
 }
 
 /* ABOUT US PAGE  */
@@ -1962,10 +1987,408 @@ footer p {
 
 
 
+/* SERVICES PAGE  */
+.about-services-section {
+  background-color: #f3f3f3;
+  width: 100%;
+    padding-top: calc(70px + 6.5rem);
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.about-services-section .about-services-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+  
+}
+
+.about-services-container   .services-header{
+  font-size: 60px;
+  color: var(--dark-text-blue);
+}
+.about-services-container .services-body{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.services-body .radiology,
+.services-body .medlab,
+.services-body .molecular-science {
+  border: 1px solid black;
+  border-radius: 10px 10px 20px 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  color: var(--dark-text-blue);
+}
+
+
+.services-body .radiology:hover,
+.services-body .medlab:hover,
+.services-body .molecular-science:hover{
+  background-color: var(--dark-text-blue);
+  color: white;
+  transform: translateY(-8px);
+}
+
+.services-body .radiology img,
+.services-body .medlab img,
+.services-body .molecular-science img {
+  
+  height: auto;
+  border-radius: 20px 20px 20px 0;
+
+  left: 0;
+  z-index: 9;
+}
+.services-body .radiology h2,
+.services-body .medlab h2,
+.services-body .molecular-science h2 {
+  
+  font-size: 40px;
+  
+  
+}
+.services-body.radiology p,
+.services-body .medlab p,
+.services-body .molecular-science p {
+  
+  line-height: 28px;
+  
+  text-align: justify;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*MEDICAL LABORATORY SECTION  */
+.medlab-section {
+  width: 100%;
+  padding: 60px 40px;
+}
+.medlab-section .medlab-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.medlab-container .medlab-left {
+    width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  padding-left: 40px;
+}
+.medlab-container .medlab-left h1 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #043868;
+}
+.medlab-container .medlab-left img {
+  
+  border-radius: 10px 10px 10px 0;
+}
+.medlab-container .medlab-left h2 {
+  margin-top: 20px;
+  color: #df8024;
+  font-size: 20px;
+}
+.medlab-container .medlab-left p {
+  line-height: 28px;
+  text-align: justify;
+  border-left: 1px solid var(--dark-text-blue);
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  color: #043868;
+  
+  
+}
+.medlab-container .medlab-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  padding-left: 40px;
+}
+.medlab-container .medlab-right h2 {
+  color: #df8024;
+  font-size: 20px;
+}
+.medlab-container .medlab-right p {
+  line-height: 28px;
+  text-align: justify;
+  border-left: 1px solid var(--dark-text-blue);
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  color: #043868;
+}
+
+/* RADIOLOGY SECTION  */
+.radiology-section {
+  width: 100%;
+  padding: 60px 40px;
+}
+.radiology-section .radiology-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.radiology-container .radiology-left {
+  width: 50%;
+    
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  padding-left: 40px;
+}
+.radiology-container .radiology-left h1 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #043868;
+}
+.radiology-container .radiology-left img {
+  /* width: 100%; */
+  border-radius: 10px 10px 10px 0;
+}
+.radiology-container .radiology-left h2 {
+  margin-top: 20px;
+  color: #df8024;
+  font-size: 20px;
+}
+.radiology-container .radiology-left p {
+  line-height: 28px;
+  text-align: justify;
+  border-left: 1px solid var(--dark-text-blue);
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  color: #043868;
+  
+}
+.radiology-container .radiology-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  padding-left: 40px;
+}
+.radiology-container .radiology-right h2 {
+  color: #df8024;
+  font-size: 20px;
+}
+.radiology-container .radiology-right p {
+  line-height: 28px;
+  text-align: justify;
+  border-left: 1px solid var(--dark-text-blue);
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  color: #043868;
+}
+
+
+
+/* MOLECULAR SCIENCE SECTION  */
+.molecular-science-section {
+  width: 100%;
+  padding: 60px 40px 90px 40px;
+}
+.molecular-science-section .molecular-science-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.molecular-science-container .molecular-science-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  padding-left: 40px;
+}
+.molecular-science-container .molecular-science-left h1 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #043868;
+}
+.molecular-science-container .molecular-science-left img {
+  
+  border-radius: 10px 10px 10px 0;
+}
+.molecular-science-container .molecular-science-left h2 {
+  /* margin-top: 20px; */
+  color: #df8024;
+  font-size: 20px;
+}
+.molecular-science-container .molecular-science-left p {
+  line-height: 28px;
+  text-align: justify;
+  border-left: 1px solid var(--dark-text-blue);
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  color: #043868;
+  
+}
+.molecular-science-container .molecular-science-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  padding-left: 40px;
+}
+.molecular-science-container .molecular-science-right h2 {
+  color: #df8024;
+  font-size: 20px;
+}
+.molecular-science-container .molecular-science-right p {
+  line-height: 28px;
+  text-align: justify;
+  border-left: 1px solid var(--dark-text-blue);
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  color: #043868;
+}
+
+
+
+
+@media only screen and (max-width:1000px){
+  /*  ABOUT SERVICES SECTION   */
+  .about-services-container   .services-header{
+  font-size: var(--md-lg-text);
+  color: var(--dark-text-blue);
+}
+.about-services-container .services-body{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+.services-body .radiology h2,
+.services-body .medlab h2,
+.services-body .molecular-science h2 {
+  
+  font-size: 30px;
+  
+  
+}
+
+  /*MEDICAL LABORATORY SECTION  */
+.medlab-section .medlab-container{
+  flex-direction: column;
+}
+.medlab-container .medlab-left{
+  width: 100%;
+  padding-left: 0;
+}
+.medlab-container .medlab-right{
+  width: 100%;
+  padding-left: 0;
+}
+
+
+
+/* RADIOLOGY SECTION  */
+
+.radiology-section .radiology-container {
+  flex-direction: column;
+}
+.radiology-container .radiology-left{
+  padding-left: 0;
+  width: 100%;
+}
+.radiology-container .radiology-right {
+  width: 100%;
+  padding-left: 0;
+}
+
+/* MOLECULAR SCIENCE SECTION  */
+
+.molecular-science-section .molecular-science-container {
+  flex-direction: column;
+}
+.molecular-science-container .molecular-science-left{
+  padding-left: 0;
+  width: 100%;
+}
+.molecular-science-container .molecular-science-right {
+  padding-left: 0;
+  width: 100%;
+}
+}
+
+
+@media only screen and (max-width:800px){
+/*  ABOUT SERVICES SECTION   */
+.about-services-section{
+    padding-top: calc(70px + 6.5rem);
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.about-services-container   .services-header{
+  font-size: var(--md-text);
+  color: var(--dark-text-blue);
+}
+.services-body .radiology h2,
+.services-body .medlab h2,
+.services-body .molecular-science h2 {
+  
+  font-size: var(--md-text);
+  
+  
+}
+
+
+
+
+  /*MEDICAL LABORATORY SECTION  */
+  .medlab-section{
+    padding: var(--responsive-padding);
+  }
+
+
+  /* RADIOLOGY SECTION  */
+.radiology-section {
+  padding: var(--responsive-padding);
+}
+
+
+/* MOLECULAR SCIENCE SECTION  */
+.molecular-science-section {
+  padding: var(--responsive-padding);
+}
+}
 
 
 
