@@ -2362,6 +2362,11 @@ footer p {
 
 /* MEDIA QIERIES ON THE BLOG HOME PAGE  */
 @media only screen and (max-width: 1000px) {
+ .blog-images-container .blog-images-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
   .blog-images-container .blood-test,
   .blog-images-container .headache,
   .blog-images-container .pills,
@@ -2380,13 +2385,23 @@ footer p {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .blog-images-container h2 {
-    text-align: center;
-    font-size: 35px;
-    padding: 0px;
-    color: #043868;
-  }
 
+
+
+.blog-images-container .blog-images-body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+
+
+.blog-images-container .blog-images-header h2 {
+  text-align: center;
+  font-size: var(--lg-text);
+
+  color: #043868;
+}
   .blog-images-container .blood-test,
   .blog-images-container .headache,
   .blog-images-container .pills,
