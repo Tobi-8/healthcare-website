@@ -170,7 +170,7 @@ header .navbar {
   height: 100vh;
   padding-top: calc(70px + 1rem);
   position: fixed;
-   /* hide it */
+  /* hide it */
   top: 0;
   right: -200px;
   transition: all 0.3s ease-in-out;
@@ -983,9 +983,9 @@ main {
 }
 .info-section .contact-section {
   width: 33.33%;
-display: flex;
-flex-direction: column;
-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   text-align: center;
 }
 
@@ -1023,7 +1023,6 @@ gap: 5px;
 
 .services-section .services-container .ggt img {
   width: 240px;
-
 }
 .services-section .services-container .ggt p {
   line-height: 25px;
@@ -1531,16 +1530,13 @@ footer p {
   .services-section .services-container {
     grid-template-columns: 1fr;
   }
- 
+
   .main-services ul {
     display: unset;
     flex-direction: column;
     gap: 5px;
   }
 }
-
-
-
 
 /* ABOUT US PAGE  */
 .about-header-section {
@@ -1629,9 +1625,6 @@ footer p {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-
-
-
 
 /* MISSION SECTION  */
 .mission-section {
@@ -1928,9 +1921,6 @@ footer p {
     height: auto;
   }
 }
-
-
-
 
 /* SERVICES PAGE  */
 .about-services-section {
@@ -2288,15 +2278,11 @@ footer p {
   }
 }
 
-
-
-
-
 /* BLOG HOME PAGE*/
 .blog-images-section {
   width: 100%;
   background-color: #f9faff;
-    padding-top: calc(70px + 6.5rem);
+  padding-top: calc(70px + 6.5rem);
   padding-bottom: 100px;
   padding-left: 40px;
   padding-right: 40px;
@@ -2310,62 +2296,89 @@ footer p {
   gap: 30px;
 }
 
-.blog-images-container h2 {
+.blog-images-container .blog-images-header h2 {
   text-align: center;
   font-size: var(--xl-text);
-  
+
   color: #043868;
 }
-
+.blog-images-container .blog-images-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 .blog-images-container .blood-test,
 .blog-images-container .headache,
-.blog-images-container .pills {
-  padding: 50px 64px;
+.blog-images-container .pills,
+.blog-images-container .radiology {
+  padding: 20px;
   background-color: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: all 0.3s ease-in-out;
 }
+.blog-images-container .blood-test:hover,
+.blog-images-container .headache:hover,
+.blog-images-container .pills:hover,
+.blog-images-container .radiology:hover {
+  color: white;
+  background-color: var(--dark-text-blue);
+  transform: translateY(-8px);
+}
+
+.blog-images-container .blood-test img,
+.blog-images-container .headache img,
+.blog-images-container .pills img,
+.blog-images-container .radiology img {
+  border-radius: 10px;
+}
+
 .blog-images-container .blood-test h1,
 .blog-images-container .headache h1,
-.blog-images-container .pills h1 {
+.blog-images-container .pills h1,
+.blog-images-container .radiology h1 {
+  font-size: var(--md-text);
   color: #575c74;
 }
 .blog-images-container .blood-test p,
 .blog-images-container .headache p,
-.blog-images-container .pills p {
+.blog-images-container .pills p,
+.blog-images-container .radiology p {
+  font-size: var(--xsm-text);
   line-height: 28px;
   color: #575c74;
 }
 .blog-images-container .blood-test a,
 .blog-images-container .headache a,
-.blog-images-container .pills a {
+.blog-images-container .pills a,
+.blog-images-container .radiology a {
   display: block;
   text-decoration: none;
   color: #28bd86;
   padding-bottom: 20px;
 }
 
-
 /* MEDIA QIERIES ON THE BLOG HOME PAGE  */
-@media only screen and (max-width: 1000px){
-.blog-images-container .blood-test,
-.blog-images-container .headache,
-.blog-images-container .pills {
-  padding: 40px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+@media only screen and (max-width: 1000px) {
+  .blog-images-container .blood-test,
+  .blog-images-container .headache,
+  .blog-images-container .pills,
+  .blog-images-container .radiology {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   .blog-images-section {
-        padding-top: calc(70px + 6.5rem);
-  padding-bottom: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-top: calc(70px + 6.5rem);
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .blog-images-container h2 {
     text-align: center;
@@ -2376,8 +2389,8 @@ footer p {
 
   .blog-images-container .blood-test,
   .blog-images-container .headache,
-  .blog-images-container .pills {
-    padding:20px;
+  .blog-images-container .pills,
+  .blog-images-container .radiology {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -2385,16 +2398,11 @@ footer p {
   }
 }
 
-
-
-
-
-
 /* BLOOD TEST PAGE  */
 .blood-test-section {
   width: 100%;
   background-color: #fafafa;
-      padding-top: calc(70px + 6.5rem);
+  padding-top: calc(70px + 6.5rem);
   padding-bottom: 60px;
   padding-left: 40px;
   padding-right: 40px;
@@ -2407,17 +2415,34 @@ footer p {
   flex-direction: column;
   gap: 30px;
 }
-.blog-images-container img{
+
+.blog-images-container .blood-tests {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+.blood-tests img {
+  height: 500px;
+  object-fit: cover;
   border-radius: 10px;
 }
-
-
- .blood-test span {
-  color: var(--orange-color);
+.blood-tests h1 {
+  font-size: var(--lg-text);
+  color: var(--dark-text-blue);
 }
- .blood-test h3 {
+
+.blood-tests span {
+  color: var(--orange-color);
+  font-family: var(--span-font-family);
+  font-size: var(--xsm-text);
+}
+.blood-tests h3 {
   color: #575c74;
   font-weight: 550;
+}
+.blood-tests p {
+  color: var(--grey-text-color);
 }
 
 /* LINK SECTION  */
@@ -2436,7 +2461,7 @@ footer p {
 }
 .link-tag a {
   text-decoration: none;
-  color:var(--orange-color);
+  color: var(--orange-color);
 }
 
 /* RELATED POSTS SECTION  */
@@ -2463,28 +2488,27 @@ footer p {
   gap: 20px;
 }
 
- .related-posts-left h1,
- .related-posts-right h1 {
+.related-posts-left h1,
+.related-posts-right h1 {
   color: var(--dark-text-blue);
 }
- .related-posts-left img,
- .related-posts-right img {
+.related-posts-left img,
+.related-posts-right img {
   width: 100%;
   height: 300px;
   cursor: pointer;
   object-fit: cover;
   transition: all 0.1 ease;
 }
- .related-posts-left img:hover,
- .related-posts-right img:hover {
+.related-posts-left img:hover,
+.related-posts-right img:hover {
   opacity: 0.9;
 }
- .related-posts-left a,
- .related-posts-right a {
+.related-posts-left a,
+.related-posts-right a {
   color: #043868;
   text-decoration: none;
   font-size: larger;
-  
 }
 
 /* COMMENT SECTION  */
@@ -2503,30 +2527,30 @@ footer p {
   flex-direction: column;
   gap: 25px;
 }
-.comment-container  h1{
+.comment-container h1 {
   font-size: var(--lg-text);
   color: var(--dark-text-blue);
 }
- .comment-container p {
+.comment-container p {
   font-family: var(--secondary-font-family);
   color: #575c74;
 }
- .comment-container textarea {
+.comment-container textarea {
   background-color: #fafafa;
   padding: 12px;
   border: 1px solid #d6d1d1;
   border-radius: 10px;
 }
- .comment-container textarea:placeholder-shown {
+.comment-container textarea:placeholder-shown {
   font-size: 16px;
   font-family: var(--secondary-font-family);
 }
- .comment-container .input-section {
+.comment-container .input-section {
   width: 100%;
   display: flex;
   gap: 30px;
 }
- .input-section input {
+.input-section input {
   padding: 12px;
   border: 1px solid #d6d1d1;
   width: 100%;
@@ -2535,11 +2559,11 @@ footer p {
   outline: none;
 }
 
- .input-section input:placeholder-shown{
-    font-size: 16px;
+.input-section input:placeholder-shown {
+  font-size: 16px;
   font-family: var(--secondary-font-family);
 }
- .comment-container .save-section {
+.comment-container .save-section {
   display: flex;
   gap: 15px;
 }
@@ -2547,13 +2571,12 @@ footer p {
   font-size: var(--sm-text);
   color: #575c74;
   font-family: var(--secondary-font-family);
-
 }
 
 .comment-container button {
   padding: 20px 35px;
-font-family: var(--secondary-font-family);
-font-size: var(--sm-text);
+  font-family: var(--secondary-font-family);
+  font-size: var(--sm-text);
   border: 1px solid rgba(128, 128, 128, 0.356);
   border-radius: 10px;
   color: white;
@@ -2561,16 +2584,14 @@ font-size: var(--sm-text);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
- .comment-container button:hover {
+.comment-container button:hover {
   background-color: white;
-  color:var(--dark-text-blue);
+  color: var(--dark-text-blue);
   transform: translateY(-8px);
 }
 
 /* MEDIA QUERIES FOR BLOOD TEST PAGE   */
 @media only screen and (max-width: 1000px) {
-
- 
 }
 
 /* MOBILE SIZE  */
@@ -2579,82 +2600,90 @@ font-size: var(--sm-text);
   .blood-test-section {
     width: 100%;
     background-color: #f9faff;
-    
-  width: 100%;
-  background-color: #f9faff;
-      padding-top: calc(70px + 6.5rem);
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+
+    width: 100%;
+    background-color: #f9faff;
+    padding-top: calc(70px + 6.5rem);
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
+  .blood-tests h1 {
+    font-size: var(--md-text);
+    color: var(--dark-text-blue);
+  }
 
   /* RELATED POSTS SECTION  */
   .related-posts-section {
     width: 100%;
     background-color: #f9faff;
-    padding: 25px 0px;
+    padding: var(--responsive-padding);
   }
-   .related-posts-container {
+  .related-posts-section .related-posts-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 50px 20px;
+    padding: 20px 0px;
     /* background-color: #1b5fc1; */
   }
   .related-posts-container .related-posts-left,
   .related-posts-container .related-posts-right {
     width: 100%;
   }
-   .related-posts-left img,
- .related-posts-right img {
-  width: 100%;
-  height: min-content;
-  cursor: pointer;
-  object-fit: cover;
-  transition: all 0.1 ease;
-}
-   .related-posts-left h1,
-   .related-posts-right h1 {
-    color:var(--dark-text-blue);
+  .related-posts-left img,
+  .related-posts-right img {
+    width: 100%;
+    height: min-content;
+    cursor: pointer;
+    object-fit: cover;
+    transition: all 0.1 ease;
+  }
+  .related-posts-left h1,
+  .related-posts-right h1 {
+    color: var(--dark-text-blue);
     font-size: var(--md-text);
   }
 
-
-   .related-posts-left a,
-   .related-posts-right a {
+  .related-posts-left a,
+  .related-posts-right a {
     font-size: var(--sm-text);
     font-weight: unset;
   }
 
   /* COMMENT SECTION  */
   .comment-section .comment-container {
-    padding: 80px 0px;
+    padding: 40px 10px;
+    gap: 15px;
   }
-   .comment-container .input-section {
+
+  .comment-container h1 {
+    font-size: var(--md-text);
+    color: var(--dark-text-blue);
+  }
+
+  .comment-container .input-section {
     display: flex;
     flex-direction: column;
   }
-   .comment-container .save-section {
+  .comment-container .save-section {
     width: 100%;
   }
   .comment-container button {
-  padding: 10px 15px;
-
-
-}
- .comment-container button:hover {
-  background-color: white;
-  color:var(--dark-text-blue);
-  transform: translateY(-8px);
-}
+    padding: 10px 15px;
+  }
+  .comment-container button:hover {
+    background-color: white;
+    color: var(--dark-text-blue);
+    transform: translateY(-8px);
+  }
 }
 
 /* HEADACHE PAGE  */
 .headache-section {
   width: 100%;
   background-color: #f9faff;
-    padding-top: calc(70px + 6.5rem);
+  padding-top: calc(70px + 6.5rem);
   padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
@@ -2667,105 +2696,123 @@ font-size: var(--sm-text);
   flex-direction: column;
   gap: 30px;
 }
- .blog-images-container .headache {
-  padding: 80px 100px;
+.blog-images-container .headaches {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-  .headache span {
-    font-family: var(--secondary-font-family);
+
+.headaches h1 {
+  font-size: var(--md-lg-text);
+  color: var(--dark-text-blue);
+}
+.headaches img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.headaches span {
+  font-family: var(--span-font-family);
+  font-size: var(--xsm-text);
   color: var(--orange-color);
 }
-.headache h2{
+.headaches h2 {
   text-align: start;
   font-size: var(--md-lg-text);
   font-family: var(--primary-font-family);
   color: var(--grey-text-color);
 }
-.headache h4{
+.headaches h4 {
   font-size: 17px;
   font-family: var(--primary-font-family);
   font-weight: 600;
 }
-  .headache h3 {
+.headaches h3 {
   color: #575c74;
   font-size: 19px;
   font-family: var(--primary-font-family);
   font-weight: 600;
-
 }
-  .headache ul li {
+.headaches p {
+  font-family: var(--secondary-font-family);
+  color: #575c74;
+}
+.headaches ul {
+  padding-left: 10px;
+}
+.headaches ul li {
   color: #575c74;
   font-family: var(--secondary-font-family);
   font-size: var(--sm-text);
   padding: 10px 0;
 }
-
- .headache ol li {
+.headaches ol {
+  padding-left: 10px;
+}
+.headaches ol li {
   color: #575c74;
   font-family: var(--secondary-font-family);
   font-size: var(--sm-text);
   padding: 10px 0;
 }
- .headache ol li:nth-child(1) {
+.headaches ol li:nth-child(1) {
   padding-top: 0px;
 }
- .blog-images-container ul.avoid li {
+.blog-images-container ul.avoid li {
   font-size: var(--sm-text);
-  
 }
- .blog-images-container ul.avoid li:nth-child(1) {
+.blog-images-container ul.avoid li:nth-child(1) {
   padding-top: 0px;
 }
 
 /* MEDIA QUERIES FOR HEADACHE PAGE   */
 @media only screen and (max-width: 1000px) {
   /* BLOOD TEST SECTION  */
-   .blog-images-container .headache {
-    padding: 80px 30px;
-  }
 }
 
 /* FOR MOBILE PHONE */
 @media only screen and (max-width: 600px) {
   .headache-section {
-  width: 100%;
-  background-color: #f9faff;
+    width: 100%;
+    background-color: #f9faff;
     padding-top: calc(70px + 6.5rem);
-  padding-bottom: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-   .blog-images-container .headache {
-    padding: 40px 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .blog-images-container .headaches {
+    padding: 40px 10px;
+  }
+  .headaches img {
+    object-position: center;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .headaches h2 {
+    text-align: start;
+    font-size: var(--md-text);
+    font-family: var(--primary-font-family);
+    color: var(--grey-text-color);
   }
 
-  .headache h2{
-  text-align: start;
-  font-size: var(--md-text);
-  font-family: var(--primary-font-family);
-  color: var(--grey-text-color);
+  .headaches h3 {
+    color: #575c74;
+    font-size: 18px;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+  }
 }
-
-  .headache h3 {
-  color: #575c74;
-  font-size: 18px;
-  font-family: var(--primary-font-family);
-  font-weight: 600;
-
-}
-}
-
-
-
 
 /* PILLS PAGE */
 .pills-section {
-      padding-top: calc(70px + 6.5rem);
+  padding-top: calc(70px + 6.5rem);
   padding-bottom: 100px;
   padding-left: 40px;
   padding-right: 40px;
   background-color: #fafafa;
 }
-.pills-section .blog-images-container{
+.pills-section .blog-images-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -2773,51 +2820,159 @@ font-size: var(--sm-text);
   flex-direction: column;
   gap: 30px;
 }
-
- .blog-images-container .pills{
-padding: 80px 100px;
- }
-
-
-
- .blog-images-container .pills span {
-  color: var(--orange-color);
+.blog-images-container .pill {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
- .blog-images-container .pills h3 {
+
+.pill h1 {
+  font-size: var(--md-lg-text);
+  color: var(--dark-text-blue);
+}
+
+.pill img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pill span {
+  color: var(--orange-color);
+  font-family: var(--span-font-family);
+  font-size: var(--xsm-text);
+}
+.pill h3 {
+  font-size: var(--md-text);
   color: #575c74;
   font-weight: 550;
-
-}.headache h2{
+}
+.pill h2 {
   text-align: start;
   font-size: var(--md-text);
   color: var(--grey-text-color);
+  font-weight: 550;
 }
 
-
- .blog-images-container .pills ul li {
+.blog-images-container .pill p {
   color: #575c74;
-  padding: 5px 0;
+  font-size: var(--sm-text);
+  font-family: var(--secondary-font-family);
+}
+.blog-images-container .pill ul {
+  padding-left: 20px;
+}
+
+.blog-images-container .pill ul li {
+  color: #575c74;
+  padding: 5px;
   font-family: var(--secondary-font-family);
   font-size: var(--sm-text);
+  /* list-style: none; */
 }
-
 
 /* MEDIA QUERY FOR THE PILLS PAGE  */
 @media only screen and (max-width: 1000px) {
-.pills-section {
-      padding-top: calc(70px + 6.5rem);
-  padding-bottom: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: #fafafa;
+  .pills-section {
+    padding-top: calc(70px + 6.5rem);
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fafafa;
+  }
 }
 
- .blog-images-container .pills{
-padding:  60px 40px;
- }
+@media only screen and (max-width: 600px) {
+  .pills-section {
+    padding-top: calc(70px + 6.5rem);
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fafafa;
+  }
+
+  .pill h1 {
+    font-size: var(--md-text);
+    color: var(--dark-text-blue);
+  }
+  .pill img {
+    object-position: center;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .pill h3 {
+    font-size: 20px;
+    color: #575c74;
+    font-weight: 550;
+  }
+  .pill h2 {
+    text-align: start;
+    font-size: 20px;
+    color: var(--grey-text-color);
+    font-weight: 550;
+  }
 }
 
+/* RADIOLOGY PAGE  */
+.rad-section {
+  background-color: white;
+  width: 100%;
+  padding-top: calc(70px + 6.5rem);
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.rad-section .rad-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rad-container h1 {
+  font-size: var(--lg-text);
+  color: var(--dark-text-blue);
+}
+.rad-container img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
+.rad-container span {
+  color: var(--orange-color);
+  font-family: var(--span-font-family);
+  font-size: var(--xsm-text);
+}
+
+.rad-container p {
+  font-size: var(--sm-text);
+  line-height: 28px;
+  color: #575c74;
+}
+
+@media only screen and (max-width: 600px) {
+  .rad-section {
+    background-color: white;
+    width: 100%;
+    padding-top: calc(70px + 6.5rem);
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rad-container h1 {
+    font-size: var(--md-text);
+    color: var(--dark-text-blue);
+  }
+  .rad-container img {
+    object-position: center;
+    height: 300px;
+    border-radius: 10px;
+  }
+}
 
 /* GALLERY PAGE  */
 .gallery-section {
@@ -2835,24 +2990,24 @@ padding:  60px 40px;
   margin: 0 auto;
   background-color: white;
 }
- .gallery-container h2 {
+.gallery-container h2 {
   font-size: var(--xl-text);
   padding-bottom: 40px;
   color: #043868;
 }
- .gallery-container .gallery-main {
+.gallery-container .gallery-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
- .gallery-container img {
+.gallery-container img {
   width: 100%;
   border-radius: 20px;
   aspect-ratio: 1/1;
   cursor: zoom-in;
   object-fit: cover;
 }
- .gallery-container img:hover {
+.gallery-container img:hover {
   opacity: 0.9;
 }
 
@@ -2874,13 +3029,13 @@ padding:  60px 40px;
     padding-left: 20px;
     padding-right: 20px;
   }
-   .gallery-container h2 {
+  .gallery-container h2 {
     font-size: 36px;
     padding: 10px 0 30px 0;
     color: #043868;
   }
 
-   .gallery-container .gallery-main {
+  .gallery-container .gallery-main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -2888,12 +3043,12 @@ padding:  60px 40px;
 }
 
 @media only screen and (max-width: 600px) {
-   .gallery-container .gallery-main {
+  .gallery-container .gallery-main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
-   .gallery-container img {
+  .gallery-container img {
     width: 100%;
     border-radius: 20px;
     aspect-ratio: 1/1;
@@ -3067,9 +3222,6 @@ padding:  60px 40px;
   background-color: var(--off-white);
   color: var(--dark-text-blue);
 }
-
-
-
 
 /* MEDIA QUERY FOR THE CONTACT PAGE  */
 @media only screen and (max-width: 1000px) {
