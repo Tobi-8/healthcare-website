@@ -1063,8 +1063,8 @@ main {
   color: #0077b5;
 }
 .services-section .services-container .main-services {
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .services-section .services-container .main-services ul {
@@ -2328,6 +2328,28 @@ footer p {
   transform: translateY(-8px);
 }
 
+.blog-images-container .blood-test:hover h1,
+.blog-images-container .blood-test:hover p,
+.blog-images-container .headache:hover h1,
+.blog-images-container .headache:hover p,
+.blog-images-container .pills:hover h1,
+.blog-images-container .pills:hover p,
+.blog-images-container .radiology:hover h1,
+.blog-images-container .radiology:hover p {
+  color: white;
+}
+
+.blog-images-container .blood-test:hover a,
+.blog-images-container .headache:hover a,
+.blog-images-container .pills:hover a,
+.blog-images-container .radiology:hover a {
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: white;
+  color: var(--dark-text-blue);
+}
+
 .blog-images-container .blood-test img,
 .blog-images-container .headache img,
 .blog-images-container .pills img,
@@ -2354,19 +2376,27 @@ footer p {
 .blog-images-container .headache a,
 .blog-images-container .pills a,
 .blog-images-container .radiology a {
+  width: 30%;
   display: block;
   text-decoration: none;
   color: #28bd86;
   padding-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.blog-images-container .blood-test a:hover,
+.blog-images-container .headache a:hover,
+.blog-images-container .pills a:hover,
+.blog-images-container .radiology a:hover {
+  transform: translateY(-8px);
 }
 
 /* MEDIA QIERIES ON THE BLOG HOME PAGE  */
 @media only screen and (max-width: 1000px) {
- .blog-images-container .blog-images-body {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
+  .blog-images-container .blog-images-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
   .blog-images-container .blood-test,
   .blog-images-container .headache,
   .blog-images-container .pills,
@@ -2386,22 +2416,18 @@ footer p {
     padding-right: 20px;
   }
 
+  .blog-images-container .blog-images-body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 
+  .blog-images-container .blog-images-header h2 {
+    text-align: center;
+    font-size: var(--lg-text);
 
-.blog-images-container .blog-images-body {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-}
-
-
-
-.blog-images-container .blog-images-header h2 {
-  text-align: center;
-  font-size: var(--lg-text);
-
-  color: #043868;
-}
+    color: #043868;
+  }
   .blog-images-container .blood-test,
   .blog-images-container .headache,
   .blog-images-container .pills,
@@ -2410,6 +2436,31 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-images-container .blood-test:hover a,
+  .blog-images-container .headache:hover a,
+  .blog-images-container .pills:hover a,
+  .blog-images-container .radiology:hover a {
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: white;
+    color: var(--dark-text-blue);
+  }
+
+  .blog-images-container .blood-test a,
+  .blog-images-container .headache a,
+  .blog-images-container .pills a,
+  .blog-images-container .radiology a {
+    width: 30%;
+    display: block;
+    text-decoration: none;
+    color: #28bd86;
+    padding-bottom: 20px;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -2627,6 +2678,12 @@ footer p {
   .blood-tests h1 {
     font-size: var(--md-text);
     color: var(--dark-text-blue);
+  }
+
+  .blood-tests img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
   /* RELATED POSTS SECTION  */
