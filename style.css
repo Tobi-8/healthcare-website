@@ -75,7 +75,7 @@ header .navbar {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0px 32px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.53);
   border-radius: 20px;
@@ -86,8 +86,8 @@ header .navbar {
 }
 
 .navbar img {
-  width: 80px;
-  padding: 10px;
+  width: 150px;
+  padding: 10px 0;
 }
 
 .navbar .nav-links {
@@ -134,6 +134,7 @@ header .navbar {
 
 .navbar .hamburger-menu {
   width: 35px;
+  height: auto;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -142,18 +143,18 @@ header .navbar {
   z-index: 999;
 }
 .hamburger-menu .menu1 {
-  width: 20px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   background-color: black;
 }
 .hamburger-menu .menu2 {
-  width: 20px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   background-color: black;
 }
 .hamburger-menu .menu3 {
-  width: 20px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   background-color: black;
 }
 
@@ -1376,6 +1377,12 @@ footer p {
   header {
     padding: 20px 10px;
   }
+
+.navbar img {
+  width: 120px;
+  padding: 10px 0;
+}
+
 
   /* HERO-SECTION  */
   .hero-section {
