@@ -2350,7 +2350,7 @@ footer p {
 .blog-images-container .headache:hover a,
 .blog-images-container .pills:hover a,
 .blog-images-container .radiology:hover a {
-  width: 30%;
+  width: 40%;
   border-radius: 10px;
   padding: 10px 15px;
   background-color: white;
@@ -2383,7 +2383,7 @@ footer p {
 .blog-images-container .headache a,
 .blog-images-container .pills a,
 .blog-images-container .radiology a {
-  width: 30%;
+  width: 40%;
   display: block;
   text-decoration: none;
   color: #28bd86;
